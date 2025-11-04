@@ -1,3 +1,9 @@
+#!/bin/bash
+# ==============================================
+# Ubuntu 24.x — Docker + Cockpit + Portainer Setup (No Reboot)
+# Author: Dickson Remedy
+# ==============================================
+
 # 1️⃣ Update & upgrade packages
 sudo apt update -y && sudo apt upgrade -y
 
