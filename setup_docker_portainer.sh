@@ -21,6 +21,13 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
+# Ensure script is available in /root for auto-resume
+if [ ! -f /root/setup_docker_portainer.sh ]; then
+  echo "Copying script to /root for auto-resume..."
+  cp "$0" /root/setup_docker_portainer.sh
+  chmod +x /root/setup_docker_portainer.sh
+fi
+
 # Helper for safe execution
 run_step() {
   echo -e "\n-----> $1"
